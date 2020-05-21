@@ -97,5 +97,5 @@ class CatsReader:
     ####
     def read_cats_file(self, file_path):
         f = h5py.File(file_path, 'r')
-        results = self.read_node(f, '/cats')
+        results = self.read_node(f, '/cats')    # results = self.read_node(f, ‘/S’)
         return results
