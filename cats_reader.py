@@ -11,10 +11,10 @@ class CatsReader:
 
     def get_column_headers_for_epoch(self, trail):
         # trail = (1, 2, 3, 4) is a tuple
-        cat, penetration, channel, block = trail #unpacking trail
+        cat, penetration, channel, block = trail #unpacking trail  # Modify here?
         return self.block_to_column_header[block]
         
-    def read_unit(self, enumerated_unit, trail):
+    def read_unit(self, enumerated_unit, trail):   # Modify here?
         i, unit = enumerated_unit
         data, epoch = unit[0], unit[1]
         epoch_df = pd.DataFrame(epoch, columns=self.get_column_headers_for_epoch(trail))
@@ -32,7 +32,7 @@ class CatsReader:
     # LOTS OF MAGICCCCC
     # tuples so variables can't change
     ####
-    def read_group(self, f, e, trail):
+    def read_group(self, f, e, trail):                                  # Modify here?
         # See http://book.pythontips.com/en/latest/map_filter.html
         next_keys = tuple(e.keys())
         next_refs_for_keys = tuple(map(lambda key: '{}{}{}'.format(e.name,'/', key), next_keys))
